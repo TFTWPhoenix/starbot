@@ -21,7 +21,7 @@ function createBot(host,port,username) {
             bot.emit('ready');
         }
     })
-
+    
     // Chat event...
     bot._protocol.on('chat',(message) => {
         // Ignore messages from all 0's UUIDs.
