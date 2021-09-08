@@ -26,7 +26,7 @@ function createBot(host,port,username) {
     bot._protocol.on('chat',(message) => {
         // Ignore messages from all 0's UUIDs.
         if(message.sender === "00000000-0000-0000-0000-000000000000") return;
-        
+        let uuid = message.sender;
         // Parse goes brr...
 
         ///////////////////////////////////////////////////////////////////////////////////////
@@ -38,13 +38,13 @@ function createBot(host,port,username) {
                 text += segment.split("\"text\":\"")[1].split("\"")[0];
             }
         }
-        bot.emit('text',text); // Emit finished text event.
+        bot.emit('text',text,uuid); // Emit finished text event.
 
         // Username and message event..
         let uname = text.split(": ")[0];
         let msg = text.split(": ")[1];
         if(uname.split(" ").length >= 1) uname = text.split(": ")[0].split(" ")[1];
-        bot.emit('chat',uname,msg);
+        bot.emit('chat',uname,msg,uuid);
         ////////////////////////////////////////////////////////////////////////////////////////
     })
 
