@@ -38,8 +38,9 @@ function createBot(host,port,username) {
                 text += segment.split("\"text\":\"")[1].split("\"")[0];
             }
         }
-        bot.emit('text',text);
+        bot.emit('text',text); // Emit finished text event.
 
+        // Username and message event..
         let uname = text.split(": ")[0];
         let msg = text.split(": ")[1];
         if(uname.split(" ").length >= 1) uname = text.split(": ")[0].split(" ")[1];
