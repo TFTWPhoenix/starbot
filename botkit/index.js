@@ -38,9 +38,11 @@ function createBot(host,port,username) {
                 text += segment.split("\"text\":\"")[1].split("\"")[0];
             }
         }
-        console.log(text);
+        bot.emit('chat',text);
         ////////////////////////////////////////////////////////////////////////////////////////
     })
+
+    return bot;
 
 }
 
