@@ -1,0 +1,24 @@
+{
+  "name": "starbot",
+  "version": "1.0.0",
+  "description": "Starbot Observatory. Open source.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TFTWPhoenix/Starbot.git"
+  },
+  "keywords": [
+    "Bot",
+    "Minecraft",
+    "Starbot"
+  ],
+  "author": "TFTWPhoenix",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/TFTWPhoenix/Starbot/issues"
+  },
+  "homepage": "https://github.com/TFTWPhoenix/Starbot#readme"
+}
