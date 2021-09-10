@@ -13,6 +13,12 @@ function createBot(host,port,username) {
     bot.port = port;
     bot.username = username;
 
+
+    // Add methods
+    bot.sendchat = function(msg) {
+        bot._protocol.write('chat',{message:msg});
+    }
+
     // Events aaaaaaa
 
     // Emit ready:

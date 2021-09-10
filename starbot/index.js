@@ -13,6 +13,6 @@ for(let i = 0; i < servers.length; i++) {
 function addBot(config) {
     let bot = botkit.createBot(config.host,config.port,config.connectAs);
     bot.on('ready',() => {
-        bot._protocol.write('chat',{message:"&7Starbot has started. &8(OBR-1.0)"})
+        bot.sendchat("&7Starbot has started. &8(OBR-1.0)")
     })
 }
