@@ -18,4 +18,7 @@ function addBot(config) {
     bot.on('ready',() => {
         bot.sendchat("&7Starbot has started. &8Version: OBR-" + version);
     })
+    bot.on('text',(text) => {
+        console.log(`[${config.host}:${config.port}/Chat] ${text}`);
+    });
 }
