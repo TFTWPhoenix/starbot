@@ -1,0 +1,5 @@
+Prerequisites:
+NodeJS
+
+Run starbot/index.js using `node starbot/index.js`
+Not that hard lol

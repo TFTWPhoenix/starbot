@@ -1,0 +1,8 @@
+Server JSONs follow this format:
+{
+    "host":"play.example.com",
+    "port":25565,
+    "connectAs":"§3ExampleUsername"
+}
+
+To add a server json simply add it into the starbot/config/servers directory.
